@@ -4,7 +4,10 @@ import {
   Library,
   ChevronLeft,
   ChevronRight,
+  Play,
 } from "lucide-react";
+import Image from "next/image";
+import Playlist from "@/components/Playlist";
 
 export default function Home() {
   return (
@@ -68,6 +71,58 @@ export default function Home() {
           </div>
 
           <h1 className="font-semibold text-3xl mt-10">Good Afternoon</h1>
+
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mt-4">
+            <Playlist
+              src="/album1.jpg"
+              alt="Manana sera bonito"
+              name="Manana"
+              width={104}
+              height={104}
+            />
+
+            <Playlist
+              src="/album2.jpg"
+              alt="Coldplay"
+              name="Coldplay"
+              width={104}
+              height={104}
+            />
+
+            <Playlist
+              src="/album3.jpg"
+              alt="Imagine Dragons"
+              name="Imagine Dragons"
+              width={104}
+              height={104}
+            />
+
+            <Playlist
+              src="/album4.jpg"
+              alt="Maluma"
+              name="Maluma"
+              width={104}
+              height={104}
+            />
+
+            <Playlist
+              src="/album5.jpg"
+              alt="Rosalia"
+              name="Rosalia"
+              width={104}
+              height={104}
+            />
+
+            <Playlist
+              src="/album6.jpg"
+              alt="Rihanna"
+              name="Rihanna"
+              width={104}
+              height={104}
+            />
+          </div>
+
+          <h2 className="font-semibold text-3xl mt-10">Made for you</h2>
         </main>
       </div>
       <footer className="bg-zinc-800 border-t border-zinc-700 p-6 ">
