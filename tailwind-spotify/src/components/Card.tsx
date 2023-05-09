@@ -14,7 +14,7 @@ const Card = ({ src, alt, title, artists, width, height }: PlaylistProps) => {
     <>
       <a
         href=""
-        className="bg-white/5 rounded p-3 group flex flex-col  gap-2 overflow-hidden hover:bg-white/10 transition-colors"
+        className="bg-white/5 relative rounded p-3 group flex flex-col  gap-2 overflow-hidden hover:bg-white/10 transition-colors"
       >
         <Image
           src={src}
@@ -23,8 +23,8 @@ const Card = ({ src, alt, title, artists, width, height }: PlaylistProps) => {
           height={height}
           className="rounded w-full static"
         />
-        <button className="w-12 h-12 absolute bottom-0  flex items-center justify-center pl-1 rounded-full bg-green-400 text-black   invisible group-hover:visible">
-          <Play />
+        <button className="w-12 h-12 absolute right-4 bottom-20  flex items-center justify-center pl-1 rounded-full bg-green-400 text-black   invisible group-hover:visible">
+          <Play fill="bg-black" />
         </button>
         <strong className="text-semibold">{title}</strong>
         <span className="text-sm text-zinc-400">{artists}</span>

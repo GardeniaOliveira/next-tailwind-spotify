@@ -1,65 +1,15 @@
-import {
-  Home as HomeIcon,
-  Search,
-  Library,
-  ChevronLeft,
-  ChevronRight,
-  Play,
-} from "lucide-react";
+import { Home as HomeIcon, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Playlist from "@/components/Playlist";
 import Card from "@/components/Card";
+import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
-        <aside className="w-72 bg-zinc-950 p-6">
-          <div className="flex items-center gap-2">
-            <div className="w-3 h-3 bg-red-500 rounded-full" />
-            <div className="w-3 h-3 bg-yellow-500 rounded-full" />
-            <div className="w-3 h-3 bg-green-500 rounded-full" />
-          </div>
-
-          <nav className="space-y-5 mt-10">
-            <a
-              href=""
-              className="flex items-center gap-3 text-xs font-semibold text-zinc-200"
-            >
-              <HomeIcon />
-              Home
-            </a>
-            <a
-              href=""
-              className="flex items-center gap-3 text-xs font-semibold text-zinc-200"
-            >
-              <Search />
-              Search
-            </a>
-            <a
-              href=""
-              className="flex items-center gap-3 text-xs font-semibold text-zinc-200"
-            >
-              <Library />
-              Your Library
-            </a>
-          </nav>
-
-          <nav className="mt-6 pt-6 border-t border-zinc-700  flex flex-col gap-3">
-            <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-              Hot Hits Brazil
-            </a>
-            <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-              Viva Latino
-            </a>
-            <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-              Songs to Sing in the Car
-            </a>
-            <a href="" className="text-sm text-zinc-400 hover:text-zinc-100">
-              Beast Mode
-            </a>
-          </nav>
-        </aside>
+        <Sidebar />
 
         <main className="flex-1 p-6">
           <div className="flex items-center gap-4">
@@ -200,11 +150,49 @@ export default function Home() {
               height={120}
             />
           </div>
+
+          <h2 className="font-semibold text-2xl mt-10">Popular albums</h2>
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 mt-4">
+            <Card
+              src="/album1.jpg"
+              alt="Top Brazil"
+              title="Top 50 - Brazil"
+              artists="Coldplay, Lady Wrap, Selena Gomez & The Scene"
+              width={120}
+              height={120}
+            />
+
+            <Card
+              src="/album2.jpg"
+              alt="Top 50 global"
+              title="Top 50 - Global"
+              artists="Coldplay, Lady Wrap, Selena Gomez & The Scene"
+              width={120}
+              height={120}
+            />
+
+            <Card
+              src="/album3.jpg"
+              alt="Top 50 Mexico"
+              title="Top 50 Mexico"
+              artists="Coldplay, Lady Wrap, Selena Gomez & The Scene"
+              width={120}
+              height={120}
+            />
+
+            <Card
+              src="/album4.jpg"
+              alt="Top 50 Japan"
+              title="Top 50 Japan"
+              artists="Coldplay, Lady Wrap, Selena Gomez & The Scene"
+              width={120}
+              height={120}
+            />
+          </div>
         </main>
       </div>
-      <footer className="bg-zinc-800 border-t border-zinc-700 p-6 ">
-        Footer
-      </footer>
+
+      <Footer />
     </div>
   );
 }
