@@ -3,15 +3,15 @@ import Image from "next/image";
 import Playlist from "@/components/Playlist";
 import Card from "@/components/Card";
 import Sidebar from "@/components/Sidebar";
-import Footer from "@/components/Footer";
+import Player from "@/components/Player";
 
 export default function Home() {
   return (
-    <div className="h-screen flex flex-col">
-      <div className="flex flex-1">
+    <div className="h-screen  flex flex-col">
+      <div className=" flex flex-1 ">
         <Sidebar />
 
-        <main className="flex-1 p-6">
+        <main className="flex-1 p-6 ">
           <div className="flex items-center gap-4">
             <button className="rounded-full bg-black/40 p-1">
               <ChevronLeft />
@@ -192,7 +192,7 @@ export default function Home() {
         </main>
       </div>
 
-      <Footer />
+      <Player />
     </div>
   );
 }

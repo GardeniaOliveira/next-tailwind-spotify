@@ -11,7 +11,7 @@ import {
   Maximize,
 } from "lucide-react";
 import Image from "next/image";
-const Footer = () => {
+const Player = () => {
   return (
     <footer className="bg-zinc-950 border-t border-zinc-700 px-6 py-4 flex items-center justify-between ">
       <div className="flex items-center gap-3">
@@ -58,4 +58,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Player;
